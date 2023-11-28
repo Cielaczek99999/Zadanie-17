@@ -1,4 +1,4 @@
-lista = []
+'''lista = []
 print(type(lista))
 
 #wypełnianie listy:
@@ -99,4 +99,93 @@ print(lista17)
 
 #jak listę połączyć z powrotem w słowo
 slowo3_po_odwr = ''.join(lista17)
-print(slowo3_po_odwr)
+print(slowo3_po_odwr)'''
+
+
+#VI Usuwanie elementów z listy 
+lista18 = ['kot', 2, 'pies', 7.4]
+
+#usuwanie na podstawie nr elemntu
+del lista18[2]
+print(lista18)
+
+#usuwanie na bazie wartości elementu
+lista18.remove('kot')
+print(lista18)
+
+#VII Funkcj
+#czyszczenie listy
+#czyszczenie łopatologiczne
+lista19 = [4, 9, 'kot', 'qwerty', 5, 99, 45]
+lista19 = []
+
+#czyszczenie eleganckie
+lista20 = [4, 9, 'kot', 'qwerty', 5, 99, 45]
+lista20.clear()
+print(lista20)
+
+#Sprawdzanie pod jakim indeksem jest dany element
+Lista21 = ['matematyka', 'fizyka, informatyka', 'język polski', 'fizyka']
+print(lista21.index('fizyka'))
+
+#Chodzenie po liście z nadzorowaniem indeksów
+Lista22 = ['jabłko', 'gruszka', 'winogrono', 'śliwka']
+
+for nr, o in enumerate(lista22):
+    print(nr, o)
+
+#kopiowanie listy
+#Sposób chałupniczy
+lista_oryginalna = [3, 1, 7, 8, 11]
+lista_kopia = lista_oryginalna
+lista_kopia = lista_oryginalna
+
+lista_kopia[2] = 67
+print(lista_oryginalna)
+
+
+#Jak można kopiować listy
+#Sposób chałupniczy
+Lista23 = [6, 1 , 2, 9, 1, 5]
+Lista23_kopia = Lista23[::] #tzw, płytka kopia
+lista23_kopia[2] = 78 #zmiana na kopii NIE POWODUJE zmian na oryginale
+print(lista23)
+print(lista23_kopia)
+
+#elegancko
+Lista24 = [6, 1 , 2, 9, 1, 5]
+Lista24_kopia = Lista24.copy() #tzw, płytka kopia
+lista24_kopia[2] = 78 #zmiana na kopii NIE POWODUJE zmian na oryginale
+print(lista24)
+print(lista24_kopia)
+
+#VIII Wyrażenia listowe
+lista_zwierzat = ['kapibara', 'kos', 'żyrafa', 'pies', 'orangutan', 'antylopa', 'tygrys', 'małpa']
+
+#Chcemy, aby na liście pozostały tylko te nazwy zwierząt, które mają parzystą liczbę liter
+#Przypomnienie - reszta z dzielenia
+print(13 % 4) #obliczamy resztę z dzielenia liczby 13 przez 4
+
+lista_zwierzat_parzyste = []
+
+for z in lista_zwierzat:
+if len(z) % 2 == 0: #Jeśli długość nazwy zwierzęcia daje przy dzieleniu przez 2 resztę 0 to...
+    lista_zwierzat_parzyste.append(z)
+print(lista_zwierzat_parzyste)
+
+#Chcemy, aby na liście pozostały tylko te nazwy zwierząt, które maja parzystą liczbę liter - z wyrażeniami listy
+lista_zwierzat_parzyste2 = [z for z in lista_zwierzat if len(z) % 2 ==0]
+print(lista_zwierzat_parzyste2)
+
+#Ile jest liczb podzielnych na 4 w zakresie podanym przez użytkownika
+a = int(input('Podaj pierwszą liczbę'))
+b = int(input('Podaj drugą liczbę'))
+wynik = len([for i in range(a, b + 1) if i % 4 ==0])
+lista_pod_4 = []
+a = int(input('Podaj pierwszą liczbę'))
+b = int(input('podaj drugą liczbę'))
+for i in range(a, b + 1):
+    if i = %4 == 0:
+        lista_pod_4.append(i)
+print(len(lista_pod_4))
+
