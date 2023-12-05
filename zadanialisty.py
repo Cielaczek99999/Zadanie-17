@@ -41,3 +41,9 @@ for i in range(len(text_lista)):
     if not(text_lista[i] in lista_pomocnicza): #sprawdzamy, czy literka nie jest na liście
         lista_pomocnicza.append(text_lista[i])
 print(lista_pomocnicza)
+
+#Funkcje:
+
+text_lista.remove('')
+
+print('$'.join(text_lista))
