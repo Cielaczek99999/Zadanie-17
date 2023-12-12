@@ -12,3 +12,17 @@ print(lista2d[1][1])
 lista3d = [[[1, 7], [2, 8], [3,9]], [[4, 10]], [5, 11], [6, 12]]]
 #Chcemy się dostać się do 8
 print(lista3d[0][1][1])
+
+
+
+
+
+
+
+
+
+
+lista1 = ['kot', 'pies', 'lama', 'koń']
+usuwany = lista1.pop(1)
+print(usuwany)
+print(lista1)
