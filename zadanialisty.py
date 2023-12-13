@@ -2,7 +2,7 @@ cities = ['Warszawa', 'Łódź', 'Gdańsk']
 cities.append('Gdańsk')
 
 idx = ['001', '002', '001', '003', '001']
-print.(idx.count('001'))
+print(idx.count('001'))
 
 text = 'Programowanie w języku Python'
 text1 = text.lower() #zmiana wszystkich liter na małe
@@ -15,7 +15,7 @@ print(text)
 #1
 text_lista = list(text1)
 for i in range(len(text_lista)):
-    if text_lista[1] == 'ę'
+    if text_lista[1] == 'ę':
         text_lista[i] = 'e'
 print(text_lista)
 
@@ -24,8 +24,8 @@ print(text_lista)
 lista_pomocnicza = []
 
 for i in range(len(text_lista)):
-    if lista_pomocnicza.count(text-lista[i]) == 0:
-        lista_pomocnicz.append(text_lista[i])
+    if lista_pomocnicza.count(text_lista[i]) == 0:
+        lista_pomocnicza.append(text_lista[i])
 print(lista_pomocnicza)
 
 #sposób 2 - z użyciem setów
@@ -43,8 +43,8 @@ for i in range(len(text_lista)):
 print(lista_pomocnicza)
 
 #Funkcje:
-
-text_lista.remove('')
+if '' in text_lista:
+    text_lista.remove('')
 
 print('$'.join(text_lista))
 
@@ -63,7 +63,7 @@ print(day1)
 #Zadanie 6
 
 techs = ['python', 'java', 'sql', 'aws']
-tech.sort(reverse=True)
+techs.sort(reverse=True)
 print(techs)
 
 #Zadanie 7
@@ -77,7 +77,7 @@ print(wynik)
 
 scorers = [27, 8, 15, 2, 9, 10, 21, 4, 20, 5]
 scorers.sort(reverse=True)
-print('3 najlepsze wyniki:{}'.format(scorers[0.:3]))
+print('3 najlepsze wyniki:{}'.format(scorers[0:3]))
 
 #wynik = list(map(str, scorers[:3]))
 #print('\n'.join(wynik))
@@ -87,7 +87,7 @@ print('3 najlepsze wyniki:{}'.format(scorers[0.:3]))
 players = ['LeBron', 'Kobe', 'Jordan']
 scorers = [27, 18, 15]
 players.pop(1)
-popped_scores = scores.pop(1)
+popped_scores = scorers.pop(1)
 print(players)
 print(scorers)
 print(popped_scores)
@@ -99,7 +99,7 @@ scorers = [27, 18, 15]
 new_players = ['LeBron', 'Kobe']
 new_scores = [27, 18]
 players.extend(new_players)
-scores.extend(new_scores)
+scorers.extend(new_scores)
 print(players)
 print(scorers)
 
@@ -171,3 +171,76 @@ menu = [
     ],
 ]
 print(menu[2][2])
+
+#Zadanie 15
+
+chicken_alfredo = [
+    [
+        'Chicken Alfredo',
+        15.99,
+        [
+            'fettuccine',
+            'alfredo sauce',
+            'chicken',
+    ]
+]
+    ]
+menu.extend(chicken_alfredo)
+print(menu[-1])
+
+#Zadanie 16
+
+menu[1][2].append('olive oil')
+menu[1][1] = 9.99
+
+print(menu)
+
+#Zadanie 17
+flights = [
+    [
+        'United Airlines',
+        'UA123',
+        'New York',
+        'Los Angeles',
+        '10:00 AM',
+    ],
+    [
+        'Delta Airlines',
+        'DL456',
+        'Chicago',
+        'Houston',
+        '11:30 AM',
+    ],
+    [
+        'American Airlines',
+        'AA789',
+        'Dallas',
+        'San Francisco',
+        '08:15 AM',
+    ],
+    [
+        'Southwest Airlines',
+        'WN012',
+        'Los Angeles',
+        'Denver',
+        '09:45 AM',
+    ],
+]
+
+godziny = []
+for i in range(len(flights)):
+    godziny.append(flights[i][4])
+print(godziny)
+
+#Zadanie 18
+
+delta_airlines = []
+lot_d_1 = flights.pop(1)
+delta_airlines.append(lot_d_1)
+print(len(flights))
+
+flights.extend(delta_airlines)
+numery_lotu = []
+for i in range(len(flights)):
+    numery_lotu.append(flights[i][1])
+print(numery_lotu)
